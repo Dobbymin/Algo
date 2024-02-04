@@ -4,8 +4,6 @@ def solution(code):
     
     for i in range(0, len(code)):
         if mode == 0:
-            
-            
             if code[i] == '1':
                 mode = 1
             else:
@@ -18,9 +16,7 @@ def solution(code):
             else:
                 if i % 2 != 0:
                     answer += code[i]
-            
-                
-    if answer == '':
-        answer = 'EMPTY'
+#     if answer == '':
+#         answer = 'EMPTY'
         
-    return answer
+    return answer if answer != '' else 'EMPTY'
