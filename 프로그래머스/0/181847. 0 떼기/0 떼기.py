@@ -1,2 +1,2 @@
 def solution(n_str):
-    return n_str.lstrip('00')
+    return n_str.lstrip('0')
