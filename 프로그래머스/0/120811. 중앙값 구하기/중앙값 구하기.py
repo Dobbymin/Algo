@@ -1,5 +1,3 @@
 def solution(array):
-    array.sort()
-    i = (len(array) // 2)
-        
-    return array[i]
+    arr = array.sort()
+    return array[len(array) // 2]
