@@ -1,23 +1,23 @@
 import sys
+
 input = sys.stdin.readline
 
-N = int(input())
+number = int(input())
 
-for _ in range(N):
-    line = input().strip()
+for _ in range(number):
     stk = []
+    data = input().strip()
 
-    for i in line:
+    for i in data:
         if i == '(':
-            stk.append('(')
+            stk.append(i)
         elif i == ')':
             if len(stk) == 0:
-                stk.append(')')
+                stk.append(i)
                 break
             else:
                 stk.pop()
-
-    if len(stk) != 0:
-        print('NO')
+    if len(stk) == 0: 
+        print("YES")
     else:
-        print('YES')
+        print("NO")
