@@ -1,13 +1,11 @@
 def solution(array, commands):
     answer = []
     arr = []
-    for num in range(len(commands)):
-        i = commands[num][0] -1
-        j = commands[num][1]
-        k = commands[num][2] -1
+    for command in commands:
+        i,j,k = command
         
-        arr = array[i:j]
-        arr.sort()
-        answer.append(arr[k])
+        arr = sorted(array[i-1:j])
+
+        answer.append(arr[k-1])
         
     return answer
