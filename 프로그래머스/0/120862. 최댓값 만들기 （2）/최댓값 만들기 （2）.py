@@ -4,7 +4,5 @@ def solution(numbers):
     numbers.sort()
     pos = numbers[0] * numbers[1]
     neg = numbers[-1] * numbers[-2]
-    if pos > neg:
-        return pos
-    else:
-        return neg
+    
+    return max(pos, neg)
