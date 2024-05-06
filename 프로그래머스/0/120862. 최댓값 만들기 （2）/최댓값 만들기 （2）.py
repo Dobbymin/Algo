@@ -1,8 +1,21 @@
 def solution(numbers):
-    pos = 0
-    neg = 0
+    num = 0
+    count = 0
+    answer = 0
+    neg_num = 0
+    for i in numbers:
+        if i < 0:
+            count += 1
+                       
     numbers.sort()
-    pos = numbers[0] * numbers[1]
-    neg = numbers[-1] * numbers[-2]
+    num = numbers[-1] * numbers[-2]
     
-    return max(pos, neg)
+    if count > 1:
+        neg_num = numbers[0] * numbers[1]
+        if neg_num > num:
+            answer = neg_num
+        else:
+            answer = num
+    else:
+        answer = num
+    return answer
