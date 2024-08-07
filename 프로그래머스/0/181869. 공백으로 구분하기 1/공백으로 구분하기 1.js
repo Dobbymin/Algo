@@ -1,5 +1,1 @@
-function solution(my_string) {
-    let answer = '';
-    answer = my_string.split(' ');
-    return answer;
-}
+const solution = my_string => my_string.split(' ')
