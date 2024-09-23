@@ -1,8 +1,5 @@
 function solution(n, m) {
-    let gcd_num = gcd(n, m);
-    let lcm_num = lcm(n, m);
-    let answer = [gcd_num, lcm_num];
-    return answer;
+    return answer = [gcd(n, m), lcm(n, m)];
 }
 
 function gcd(a, b) {
