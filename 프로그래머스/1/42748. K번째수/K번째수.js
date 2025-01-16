@@ -1,23 +1,19 @@
-function solution(array, commands) {
-    let result = [];
-    let i = 0;
-    let j = 0;
-    let k = 0;
-
-    
-    for(let n = 0; n < commands.length; n++) {
-        i = commands[n][0];
-        j = commands[n][1];
-        k = commands[n][2];
-        
-        let sliced = array.slice(i-1, j);
-        let sorted = sliced.sort((a,b)=> a - b)
-        
-        result.push(sorted[k-1])
-    }
-    
-    return result;
+function sliceArr(array, start, end, k) {
+    const arr = array.slice(start, end).sort((a, b) => a - b);
+    return arr[k];
 }
 
-// i번째 ~ j번째까지 자른 후 정렬
-// 정렬된 배열에서 k번째의 수 구하기
+function solution(array, commands) {
+    var answer = [];
+    
+    let i = 0, j = 0, k = 0;
+    
+    for (let n = 0; n < commands.length; n++) {
+        i = commands[n][0] - 1;
+        j = commands[n][1];
+        k = commands[n][2] - 1;
+        
+        answer.push(sliceArr(array, i, j , k));
+    }
+    return answer;
+}
