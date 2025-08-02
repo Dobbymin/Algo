@@ -4,9 +4,6 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-rl.on('line', function (line) {
-    input = [line];
-}).on('close',function(){
-    str = input[0];
-    console.log('!@#$%^&*(\\\'\"<>?:;');
+rl.on('close', function () {
+    console.log(`!@#$%^&*(\\'\"\<>?:;`);
 });
