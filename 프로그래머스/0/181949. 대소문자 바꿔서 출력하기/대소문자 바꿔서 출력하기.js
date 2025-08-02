@@ -7,23 +7,24 @@ const rl = readline.createInterface({
 let input = [];
 
 const swapCase = (str) => {
-    let swapped = '';
+    let swap = '';
     
-    for (let i = 0; i <str.length; i++) {
+    for(let i = 0; i < str.length; i++) {
         const char = str[i];
-        if (char === char.toUpperCase()) {
-            swapped += char.toLowerCase();
-        } else {
-            swapped += char.toUpperCase();
-        }
+        
+        if (char === char.toUpperCase() && char !== char.toLowerCase()){
+            swap += char.toLowerCase();
+        } else if (char === char.toLowerCase() && char !== char.toUpperCase()) {
+            swap += char.toUpperCase();
+        } 
     }
-    
-    return swapped;
+    return swap;
 }
 
 rl.on('line', function (line) {
     input = [line];
 }).on('close',function(){
     str = input[0];
+    
     console.log(swapCase(str));
 });
