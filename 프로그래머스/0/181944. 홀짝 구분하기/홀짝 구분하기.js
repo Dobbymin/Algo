@@ -6,14 +6,16 @@ const rl = readline.createInterface({
 
 let input = [];
 
-const numberFn = (n) => {
-    return (n % 2 == 0 ? console.log(n, 'is even') : console.log(n, 'is odd'))
-    
+const func = (num) => {
+    if (num % 2 === 0) {
+        console.log(`${num} is even`);
+    } else {
+        console.log(`${num} is odd`);
+    }
 }
-
 rl.on('line', function (line) {
     input = line.split(' ');
 }).on('close', function () {
     n = Number(input[0]);
-    numberFn(n);
+    func(n);
 });
