@@ -1,6 +1,18 @@
 function solution(n) {
-    if(n%2===1)
-      return  (n+1)/2*((n + 1)/2) ;
-    else
-      return   n*(n+1)*(n+2)/6;
+    var answer = 0;
+    if (n % 2 !== 0) {
+        for (let i = 1; i <= n; i++) {
+            if (i % 2 !== 0) {
+                answer += i;
+                console.log(answer);
+            }
+        }
+    } else {
+         for (let i = 1; i <= n; i++) {
+            if (i % 2 === 0) {
+                answer += i * i;
+            }
+        }
+    }
+    return answer;
 }
