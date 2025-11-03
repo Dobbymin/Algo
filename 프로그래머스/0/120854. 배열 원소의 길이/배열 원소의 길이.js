@@ -1,7 +1,7 @@
 function solution(strlist) {
     var answer = [];
-    for (let i of strlist){
-        answer.push(i.length);
-    }
+    strlist.forEach((str) => {
+        answer.push([...str].length);
+    })
     return answer;
 }
