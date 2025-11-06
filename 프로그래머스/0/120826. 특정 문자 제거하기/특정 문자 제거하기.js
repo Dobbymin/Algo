@@ -1,3 +1,5 @@
 function solution(my_string, letter) {
-    return my_string.split(letter).join('');
+    var answer = '';
+    const arr = [...my_string].filter((str) => str !== letter);
+    return arr.join('');
 }
