@@ -9,11 +9,9 @@ let input = [];
 rl.on('line', function (line) {
     input = line.split(' ');
 }).on('close', function () {
-    re(Number(...input));
-});
-
-const re = (max) => {
-    for (let i = 1; i < max+1 ; i++) {
+    const num = Number(input[0]);
+    
+    for (let i = 1; i <= num; i+=1) {
         console.log('*'.repeat(i));
     }
-}
+});
