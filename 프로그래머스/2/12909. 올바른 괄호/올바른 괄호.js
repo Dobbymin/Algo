@@ -1,12 +1,14 @@
 function solution(s){
-    let count = 0;
-    for(let i = 0; i < s.length; i++) {
-        if (s[i] === '(') count += 1;
-        if (s[i] !== '(') count += -1;
+    let stack = [];
+    let arr = [...s];
+    
+    if (arr[0] === ')') return false;
         
-        if (count < 0) return false;
+    for(let i = 0; i < arr.length; i++) {
+        if (arr[i] == '(') stack.push(arr[i]);
+        if (arr[i] == ')') stack.pop();
     }
-    if (count === 0) answer = true
-    if (count !== 0) answer = false
-    return answer;
+    if (stack.length === 0) return true;
+    else if (stack.length !== 0) return false;
+   
 }
