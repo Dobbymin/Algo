@@ -8,7 +8,7 @@ function solution(s){
         if (arr[i] == '(') stack.push(arr[i]);
         if (arr[i] == ')') stack.pop();
     }
-    if (stack.length === 0) return true;
-    else if (stack.length !== 0) return false;
+    
+    return stack.length === 0 ? true : false;
    
 }
